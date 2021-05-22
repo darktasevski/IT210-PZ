@@ -11,7 +11,6 @@
         $aboutPagePath = $isExecInPublicRoot ? "pages/about.php" : "about.php";
         $contactPagePath = $isExecInPublicRoot ? "pages/contact.php" : "contact.php";
         $modCatalogPagePath = $isExecInPublicRoot ? "pages/mod_catalog.php" : "mod_catalog.php";
-        $myAccountPagePath = $isExecInPublicRoot ? "pages/account.php" : "account.php";
         $logoutPagePath = $isExecInPublicRoot ? "../src/logout.php" : "../../src/logout.php";
         $loginPagePath = $isExecInPublicRoot ? "pages/login.php" : "login.php";
 
@@ -24,10 +23,9 @@
         echo '<li class="link"><a href="'.$contactPagePath.'">Contact</a> </li>';
 
         if (isset($_SESSION["email"])) {
-            if (isset($_SESSION["is_employee"])){
+            if (isset($_SESSION["is_employee"]) && $_SESSION["is_employee"] == 1){
                 echo '<li class="link"><a href="'.$modCatalogPagePath.'">Modify Catalog</a> </li>';
             }
-            echo '<li class="link"><a href="'.$myAccountPagePath.'">My Account</a> </li>';
             echo '<li class="link"><a href="'.$logoutPagePath.'">Logout</a> </li>';
         } else {
             echo '<li class="link"><a href="'.$loginPagePath.'">Login</a> </li>';

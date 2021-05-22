@@ -42,6 +42,16 @@ define('ROOT_PATH', __DIR__);
     </section>
 </main>
 
-<?php require_once("common/footer.php") ?>
+<?php
+    require_once("common/footer.php");
+
+    if (isset($_SESSION["name"])){
+        echo '<div class="greeting">
+            <p>Hello, '.$_SESSION["name"].'.</p>
+            <p>Welcome to our shop!</p>
+        </div>';
+    }
+?>
+
 </body>
 </html>

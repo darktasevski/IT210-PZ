@@ -8,7 +8,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = $_POST["password"];
     $password = md5($password);
 
-    $stmt = $conn->prepare("SELECT * FROM clients WHERE email=:email AND password=:password");
+    $stmt = $conn->prepare("SELECT id, email, name, is_employee FROM clients WHERE email=:email AND password=:password");
     $stmt->bindParam(":email", $email);
     $stmt->bindParam(":password", $password);
     $stmt->execute();
@@ -20,6 +20,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $_SESSION["id"] = $row["id"];
         $_SESSION["email"] = $row["email"];
         $_SESSION["name"] = $row["name"];
+        $_SESSION["is_employee"] = $row["is_employee"];
         header("Location: ../public/index.php");
     } else {
         header("Location: ../public/pages/login.php?fail=1");
