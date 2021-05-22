@@ -25,4 +25,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     } else {
         header("Location: ../public/pages/login.php?fail=1");
     }
+} else {
+    header("Location: ../public/pages/login.php?fail=1");
 }

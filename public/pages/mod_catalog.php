@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/main.css">
@@ -30,7 +30,7 @@
             <div class="tab-panels">
                 <section id="add_new" class="tab-panel">
                     <h3 class="h__center_text">Add new jewelry piece to catalog</h3>
-                    <form id="contact" class="form" action="../../src/new_jewel.php" method="POST">
+                    <form id="contact" class="form" action="../../src/add_jewel.php" method="POST">
                         <fieldset>
                             <input placeholder="Piece name" type="text" tabindex="1" name="name" required autofocus>
                         </fieldset>
@@ -38,10 +38,10 @@
                             <input placeholder="Piece price in euros" min="1" type="number" tabindex="2" name="price" required>
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Piece image URL" type="email" tabindex="3" name="image_uri" required>
+                            <input placeholder="Piece image URL" type="text" tabindex="3" name="image_uri" required>
                         </fieldset>
                         <fieldset>
-                            <textarea placeholder="Piece Description..." tabindex="4"></textarea>
+                            <textarea placeholder="Piece Description..." tabindex="4" name="description"></textarea>
                         </fieldset>
                         <fieldset>
                             <button name="submit" type="submit">Submit</button>
@@ -59,11 +59,12 @@
                             <input placeholder="Piece price" min="1" type="number" tabindex="2" name="price" required>
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Piece image" type="email" tabindex="3" name="image_uri" required>
+                            <input placeholder="Piece image" type="text" tabindex="3" name="image_uri" required>
                         </fieldset>
                         <fieldset>
                             <textarea placeholder="Piece Description..." tabindex="4"></textarea>
                         </fieldset>
+                        <input type="hidden" id="idInput" name="id" hidden />
                         <fieldset>
                             <button name="submit" type="submit">Submit</button>
                         </fieldset>
@@ -74,6 +75,8 @@
         <?php
         if (isset($_GET["fail"])) {
             echo "<p class='error_message'>Something went wrong. Please try again later.</p>";
+        } else if (isset($_GET["success"])) {
+            echo "<p class='success_message'>Operation was executed successfully.</p>";
         }
         ?>
     </section>

@@ -162,6 +162,10 @@ a.link {
     color: red;
 }
 
+.success_message {
+    color: #8F845B;
+}
+
 .greeting {
     opacity: 1;
     font-size: 24px;

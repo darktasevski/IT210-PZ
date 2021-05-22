@@ -35,4 +35,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['name'])
     } else {
         header("Location: ../public/pages/register.php?fail=1");
     }
+} else {
+    header("Location: ../public/pages/register.php?fail=1");
 }
+
