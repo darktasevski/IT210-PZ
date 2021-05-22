@@ -1,17 +1,17 @@
 <?php
 require_once('common/connection.php');
 
-if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image_uri'])) {
+if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image_uri']) && isset($_POST['id'])) {
     $conn = connect();
 
-    $name = $_POST['name'];
-    $price = $_POST['price'];
-    $image_uri = $_POST['image_uri'];
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $image_uri = filter_var($_POST['image_uri'], FILTER_SANITIZE_URL);
+    $price = filter_var($_POST['price'], FILTER_SANITIZE_NUMBER_INT);
+    $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
     $description = null;
-    $id = $_POST['id'];
 
     if (isset($_POST['description'])){
-        $description = $_POST['description'];
+        $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
     }
 
     $stmt = $conn->prepare("UPDATE jewelry j 
