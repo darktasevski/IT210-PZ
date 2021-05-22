@@ -28,7 +28,7 @@
                 <input placeholder="Your Password" type="password" tabindex="2" name="password" required >
             </fieldset>
             <fieldset>
-                <button name="submit" type="submit" id="contact-submit">Submit</button>
+                <button name="submit" type="submit">Submit</button>
             </fieldset>
         </form>
         <?php

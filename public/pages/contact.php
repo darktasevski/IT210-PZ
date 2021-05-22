@@ -31,10 +31,10 @@
                     <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
                 </fieldset>
                 <fieldset>
-                    <textarea placeholder="Type your message here...." tabindex="4" required></textarea>
+                    <textarea placeholder="Type your message here..." tabindex="4" required></textarea>
                 </fieldset>
                 <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    <button name="submit" type="submit">Submit</button>
                 </fieldset>
             </form>
             <?php

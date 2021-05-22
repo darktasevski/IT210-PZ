@@ -25,7 +25,7 @@
                 <input placeholder="Your Name" type="text" tabindex="1" name="name" required autofocus>
             </fieldset>
             <fieldset>
-                <input placeholder="Your Surname" type="text" tabindex="2" name="surname" required autofocus>
+                <input placeholder="Your Surname" type="text" tabindex="2" name="surname" required>
             </fieldset>
             <fieldset>
                 <input placeholder="Your Email Address" type="email" tabindex="3" name="email" required>
@@ -40,7 +40,7 @@
                 <input placeholder="Your Shipping address" type="text" tabindex="5" name="address" required>
             </fieldset>
             <fieldset>
-                <button name="submit" type="submit" id="contact-submit">Submit</button>
+                <button name="submit" type="submit">Submit</button>
             </fieldset>
         </form>
         <?php

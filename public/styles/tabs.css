@@ -1,0 +1,61 @@
+/*
+Based on: http://simplyaccessible.com/article/danger-aria-tabs/
+*/
+
+.tabs > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+}
+
+.tabs .tab-panel {
+    display: none;
+}
+/*CSS magic*/
+.tabs > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabs > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabs > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabs > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabs > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabs > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+}
+
+.tabs > label {
+    text-align: center;
+    width: 49%;
+    color: #C9AC9C;
+    font-family: 'Encode Sans Expanded Medium', sans-serif;
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tabs > label:hover,
+.tabs > input:focus + label {
+    color: #8F845B;
+}
+
+.tabs > label:hover::after,
+.tabs > input:focus + label::after,
+.tabs > input:checked + label::after {
+    background: #8F845B;
+}
+
+.tabs > input:checked + label {
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+}
+
+.tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+}
+
+.tabs {
+    max-width: 65em;
+}

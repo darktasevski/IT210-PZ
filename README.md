@@ -19,9 +19,10 @@ prostoru za banere i reklame) i potrebno je osmisliti funkcionalnost tog menija.
 - [ ] Dodati mogućnost izmene podataka.
 - [ ] Bar jedna strana na kojoj se prikazuju uneti podaci iz baze.
 - [ ] HTML forma za pretragu podataka iz baze ili master/detail strane.
-- [ ] Mehanizam za login/logout i praćenje trenutnog korisnika. Potrebno je kreirati odgovarajuću tabelu u bazi i HTML formu za login sa korisničkim imenom i lozinkom. Korisnici mogu biti „obični“ korisnici ili administratori. Za korisnike administratore omogućiti dodatne funkcije koje nisu dostupne ostalim korisnicima.
+- [x] Mehanizam za login/logout i praćenje trenutnog korisnika. Potrebno je kreirati odgovarajuću tabelu u bazi i HTML formu za login sa korisničkim imenom i lozinkom. Korisnici mogu biti „obični“ korisnici ili administratori.
+- [ ] Za korisnike administratore omogućiti dodatne funkcije koje nisu dostupne ostalim korisnicima.
 - [ ] Omogućiti svakom korisniku da briše samo one stavke koje je on upisao u bazu, dok administratori mogu da brišu sve.
 - [ ] Sve forme moraju imati proveru unetih podataka (polja koja moraju biti određenenog formata, ne smeju ostati prazna i slično).
 - [x] Pravilno konstruisani upiti koji nisu ranjivi na SQL injection napade.
-- [ ] Projekat treba da ima mehanizam za praćenje sesija, odnosno korisničkih podataka kao što su ime korisnika i da li ima administratorske privilegije ili ne.
-- [ ] U zaglavlju strane pored opcije logout, u slučaju da je neki korisnik ulogovan, treba da stoji ime/username tog korisnika koje se čuva preko sesije.
+- [x] Projekat treba da ima mehanizam za praćenje sesija, odnosno korisničkih podataka kao što su ime korisnika i da li ima administratorske privilegije ili ne.
+- [x] U zaglavlju strane pored opcije logout, u slučaju da je neki korisnik ulogovan, treba da stoji ime/username tog korisnika koje se čuva preko sesije.

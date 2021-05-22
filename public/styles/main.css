@@ -25,6 +25,11 @@ h1 {
     font-size: 42px;
 }
 
+h3 {
+    color: #C9AC9C;
+    font-size: 24px;
+}
+
 p {
     color: #C9AC9C;
     font-size: 18px;
@@ -175,4 +180,8 @@ a.link {
 
 .h__underline {
     border-bottom: 2px solid #C9AC9C;
+}
+
+.h__center_text {
+    text-align: center;
 }

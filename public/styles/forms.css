@@ -30,6 +30,7 @@ fieldset input[type="text"],
 fieldset input[type="tel"],
 fieldset input[type="email"],
 fieldset input[type="password"],
+fieldset input[type="number"],
 fieldset input[type="url"],
 fieldset textarea {
     flex-grow: 1;
@@ -45,6 +46,7 @@ fieldset input[type="text"]:hover,
 fieldset input[type="tel"]:hover,
 fieldset input[type="email"]:hover,
 fieldset input[type="password"],
+fieldset input[type="number"],
 fieldset input[type="url"]:hover,
 fieldset textarea:hover {
     transition: border-color 0.3s ease-in-out;
