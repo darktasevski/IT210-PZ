@@ -135,8 +135,12 @@ footer {
     border-bottom: 2px solid #C9AC9C;
 }
 
-
-
+.title {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
 
 /* Helper classes */
 

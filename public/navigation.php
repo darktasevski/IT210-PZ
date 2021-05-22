@@ -1,5 +1,5 @@
 <header>
-    <h1>RuneStone</h1>
+    <h1><a class="title" href="index.php">RuneStone</a></h1>
     <ul class="nav" aria-roledescription="Navigation">
         <li class="link"><a href="pages/catalog.php">Jewelry</a> </li>
         <li class="link"><a href="pages/featured.php">Featured</a> </li>

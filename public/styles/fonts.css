@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'Encode_Sans_expandedmedium';
+    font-family: 'Encode Sans Expanded Medium';
     src: url('../fonts/encodesansexpanded-medium-webfont.woff2') format('woff2'),
     url('../fonts/EncodeSansExpanded-Medium.ttf') format('truetype'),
     url('../fonts/encodesansexpanded-medium-webfont.woff') format('woff');
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-    font-family: 'Encode_Sans_expandedregular';
+    font-family: 'Encode Sans Expanded Regular';
     src: url('../fonts/encodesansexpanded-regular-webfont.woff2') format('woff2'),
     url('../fonts/EncodeSansExpanded-Regular.ttf') format('truetype'),
     url('../fonts/encodesansexpanded-regular-webfont.woff') format('woff');
@@ -30,7 +30,7 @@
 }
 
 @font-face {
-    font-family: 'Encode_Sans_expandedsemibold';
+    font-family: 'Encode Sans Expanded SemiBold';
     src: url('../fonts/encodesansexpanded-semibold-webfont.woff2') format('woff2'),
     url('../fonts/EncodeSansExpanded-SemiBold.ttf') format('truetype'),
     url('../fonts/encodesansexpanded-semibold-webfont.woff') format('woff');
@@ -45,6 +45,12 @@ h1, h2, h3 {
 }
 
 p, a {
-    font-family: 'Encode_Sans_expandedregular', sans-serif;
+    font-family: 'Encode Sans Expanded Regular', sans-serif;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    font: 14px "Encode Sans Expanded Regular", Helvetica, Arial, sans-serif;
+}
