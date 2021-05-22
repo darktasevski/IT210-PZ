@@ -18,7 +18,7 @@
 
 <main>
     <section class="about">
-        <p>Account</p>
+        <p>Login</p>
     </section>
 </main>
 
