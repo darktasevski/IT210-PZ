@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Giovanna';
+    src: url('../fonts/giovanna-webfont.woff2') format('woff2'),
+    url('../fonts/Giovanna.ttf') format('truetype'),
+    url('../fonts/Giovanna.otf') format('opentype'),
+    url('../fonts/giovanna-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Encode_Sans_expandedmedium';
+    src: url('../fonts/encodesansexpanded-medium-webfont.woff2') format('woff2'),
+    url('../fonts/EncodeSansExpanded-Medium.ttf') format('truetype'),
+    url('../fonts/encodesansexpanded-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Encode_Sans_expandedregular';
+    src: url('../fonts/encodesansexpanded-regular-webfont.woff2') format('woff2'),
+    url('../fonts/EncodeSansExpanded-Regular.ttf') format('truetype'),
+    url('../fonts/encodesansexpanded-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Encode_Sans_expandedsemibold';
+    src: url('../fonts/encodesansexpanded-semibold-webfont.woff2') format('woff2'),
+    url('../fonts/EncodeSansExpanded-SemiBold.ttf') format('truetype'),
+    url('../fonts/encodesansexpanded-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+h1, h2, h3 {
+    font-family: 'Giovanna', serif;
+}
+
+p, a {
+    font-family: 'Encode_Sans_expandedregular', sans-serif;
+}
+

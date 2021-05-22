@@ -1,0 +1,145 @@
+html, body {
+    background: #171717;
+    position: relative;
+    overflow: hidden;
+}
+
+html {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 200px max-content 200px;
+}
+
+main {
+    position: relative;
+}
+
+h1 {
+    color: #C9AC9C;
+    font-size: 42px;
+}
+
+/* Nav */
+
+
+header {
+    padding: 25px 60px;
+    display: flex;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 10px;
+}
+
+.nav > * {
+    margin: 0 10px;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    font-size: 18px;
+    color: #C9AC9C;
+    opacity: 0.8;
+}
+
+/* Hero classes */
+
+.img__container.img__featured {
+    position: absolute;
+    top: -170px;
+    right: -170px;
+    opacity: 0.9;
+}
+
+.img__featured img {
+    width: 600px;
+    height: 600px;
+}
+
+.img__container.img_alternate {
+    opacity: 0.7;
+    position: absolute;
+    top: 400px;
+    right: 150px;
+    z-index: 11;
+
+}
+
+.img__container.img_alternate_2 {
+    opacity: 0.4;
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    transform: rotate(90deg);
+    z-index: 11;
+
+}
+
+.img__container.img_alternate_3 {
+    opacity: 0.6;
+    position: absolute;
+    top: 350px;
+    right: 470px;
+    transform: rotate(35deg);
+    z-index: 11;
+
+}
+
+.bg_image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+}
+
+
+.hero__message {
+    color: #C9AC9C;
+    padding-left: 100px;
+    margin-top: 100px;
+}
+
+.hero__message p {
+     width: 500px;
+     font-size: 20px;
+    line-height: 140%;
+ }
+
+.hero__message p:nth-of-type(2) {
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+.link {
+    margin-top: 30px;
+    list-style: none;
+}
+
+.link a {
+    text-decoration: none;
+    color: #C9AC9C;
+    border-bottom: 2px solid #C9AC9C;
+}
+
+
+
+
+/* Helper classes */
+
+.h__underline {
+    border-bottom: 2px solid #C9AC9C;
+}
