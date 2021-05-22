@@ -50,6 +50,7 @@ p, a {
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
 input[type="tel"],
 textarea {
     font: 14px "Encode Sans Expanded Regular", Helvetica, Arial, sans-serif;

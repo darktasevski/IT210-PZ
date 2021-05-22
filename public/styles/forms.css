@@ -1,4 +1,4 @@
-.about {
+.container {
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-#contact {
+.form {
     width: 600px;
     color: #C9AC9C;
     background: #161616;
@@ -29,6 +29,7 @@ fieldset {
 fieldset input[type="text"],
 fieldset input[type="tel"],
 fieldset input[type="email"],
+fieldset input[type="password"],
 fieldset input[type="url"],
 fieldset textarea {
     flex-grow: 1;
@@ -43,6 +44,7 @@ fieldset textarea {
 fieldset input[type="text"]:hover,
 fieldset input[type="tel"]:hover,
 fieldset input[type="email"]:hover,
+fieldset input[type="password"],
 fieldset input[type="url"]:hover,
 fieldset textarea:hover {
     transition: border-color 0.3s ease-in-out;
@@ -55,7 +57,7 @@ fieldset textarea {
     resize: none;
 }
 
-#contact button[type="submit"] {
+.form button[type="submit"] {
     font-family: 'Encode Sans Expanded SemiBold', sans-serif;
     cursor: pointer;
     width: 50%;
@@ -67,15 +69,15 @@ fieldset textarea {
     font-size: 15px;
 }
 
-#contact button[type="submit"]:hover {
+.form button[type="submit"]:hover {
     background: #2F2424;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
 }
 
-#contact input:focus,
-#contact textarea:focus {
+.form input:focus,
+.form textarea:focus {
     outline: 0;
     border: 1px solid #aaa;
 }

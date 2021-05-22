@@ -2,7 +2,7 @@
 <header>
         <?php
         session_start();
-
+        // if the navigation.php is executing in pages/ directory, then we need to modify the anchor paths
         $isExecInPublicRoot = strpos($_SERVER["SCRIPT_FILENAME"],"index.php");
 
         $mainPagePath = $isExecInPublicRoot ? "index.php" : "../index.php";

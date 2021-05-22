@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/forms.css">
 </head>
 <body>
 <img src="../images/cartographer.png" alt="bg pattern" class="bg_image">
@@ -18,9 +18,9 @@
 <?php require_once("../navigation.php") ?>
 
 <main>
-    <section class="about">
+    <section class="container">
         <h1>Contact Us</h1>
-            <form id="contact" action="contact.php?success=1" method="POST">
+            <form id="contact" class="form" action="contact.php?success=1" method="POST">
                 <fieldset>
                     <input placeholder="Your name" type="text" tabindex="1" required autofocus>
                 </fieldset>

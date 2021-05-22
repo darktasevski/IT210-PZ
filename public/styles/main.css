@@ -25,6 +25,11 @@ h1 {
     font-size: 42px;
 }
 
+p {
+    color: #C9AC9C;
+    font-size: 18px;
+}
+
 /* Nav */
 
 
@@ -135,11 +140,21 @@ footer {
     border-bottom: 2px solid #C9AC9C;
 }
 
+a.link {
+    text-decoration: none;
+    color: #C9AC9C;
+    border-bottom: 2px solid #C9AC9C;
+}
+
 .title {
     color: inherit;
     font-size: inherit;
     font-family: inherit;
     text-decoration: none;
+}
+
+.error_message {
+    color: red;
 }
 
 /* Helper classes */

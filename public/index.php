@@ -38,7 +38,7 @@ define('ROOT_PATH', __DIR__);
         <p><em> Since ancient times, people wear pendants, amulets, bracelets and rings... <span class="h__underline">These pieces show people's individuality,</span>
             nationality, <span class="h__underline">religious beliefs, and social status.</span>
             They give protection, inspire confidence and, of course, simply adorn men and women.</em></p>
-        <p class="link"><i>ß </i><a href="#">About Us</a></p>
+        <p class="link"><i>ß </i><a href="pages/about.php">About Us</a></p>
     </section>
 </main>
 
