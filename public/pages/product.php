@@ -7,13 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Runestone | About Us</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/social_bar.css">
     <link rel="stylesheet" href="../styles/product.css">
 </head>
 <body>
 <?php require_once("../navigation.php") ?>
+
+<?php require_once("../common/social_bar.php") ?>
 
 <main>
     <section class="about">

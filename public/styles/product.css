@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .product_layout {
@@ -13,6 +14,8 @@
 .product__title {
     font-size: 36px;
     color: #C9AC9C;
+    padding: 0 50px;
+    text-align: center;
 }
 
 .product__image {
@@ -41,4 +44,8 @@
 .product__price {
     font-size: 30px;
     padding: 0 100px;
+}
+
+.icon-bar {
+    right: 15px;
 }

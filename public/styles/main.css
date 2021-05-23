@@ -315,6 +315,7 @@ a.link {
 }
 
 .success_message {
+    margin-top: 0;
     color: #8F845B;
 }
 
@@ -335,7 +336,8 @@ a.link {
 /*Featured */
 
 .featured {
-    margin-top: 50vh;
+    margin-top: 30vh;
+    padding-bottom: 50px;
 }
 
 .featured__title {

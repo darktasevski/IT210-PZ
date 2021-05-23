@@ -8,6 +8,10 @@
     flex-direction: column;
 }
 
+.container h1 {
+    margin: 10px;
+}
+
 .form {
     width: 600px;
     color: #C9AC9C;
@@ -92,6 +96,7 @@ fieldset textarea {
 }
 
 .get_back_msg {
+    margin-top: 0;
     min-height: 20px;
     color: #C9AC9C;
     text-align: center;
