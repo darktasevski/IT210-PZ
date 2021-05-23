@@ -14,7 +14,7 @@ prostoru za banere i reklame) i potrebno je osmisliti funkcionalnost tog menija.
 - [x] Strana kontakt na kojoj treba da postoji forma za slanje poruka. Pored forme na ovoj strani treba da se nalaze kontakt podaci (email, telefon, adresa, mapa i slično).
 - [x] Implementirati validaciju forme: ime i prezime moraju da budu jedna reč i da ne sadrže brojeve, tekst poruke mora da ima minimalnu i maksimalnu dužinu, u polju za broj telefona mogu se nalaziti samo brojevi i karakter + koji jedino može da bude na početku, pre brojeva.
 - [x] Dodati favicon na sajtu (mala sličica koja se nalazi u tabovima ukoliko se klikne na sajt).
-- [ ] Baza podataka sa najmanje pet tabela koju sami dizajnirate, a koja odgovara zadatoj temi.
+- [x] Baza podataka sa najmanje pet tabela koju sami dizajnirate, a koja odgovara zadatoj temi.
 - [x] HTML forme za unos podataka u bazu.
 - [x] Dodati mogućnost izmene podataka.
 - [x] Bar jedna strana na kojoj se prikazuju uneti podaci iz baze.
