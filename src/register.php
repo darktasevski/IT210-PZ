@@ -3,17 +3,24 @@ require_once('common/connection.php');
 
 if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['address'])) {
     $conn = connect();
+    $email = null;
 
-    $email = $_POST["email"];
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        $email = $_POST['email'];
+    } else {
+        header("Location: ../public/pages/login.php?fail=1");
+    }
+
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $surname = filter_var($_POST['surname'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+    $address = filter_var($_POST['address'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+
     $password = $_POST["password"];
     $password = md5($password);
-    $name = $_POST["name"];
-    $surname = $_POST["surname"];
-    $address = $_POST["address"];
     $tel = null;
 
     if (isset($_POST["phone"])){
-        $tel = $_POST["phone"];
+        $tel = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
     }
 
     $stmt = $conn->prepare("INSERT INTO clients (email, password, name, surname, telephone, address)

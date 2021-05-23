@@ -3,8 +3,14 @@ require_once('common/connection.php');
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
     $conn = connect();
+    $email = null;
 
-    $email = $_POST["email"];
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        $email = $_POST['email'];
+    } else {
+        header("Location: ../public/pages/login.php?fail=1");
+    }
+
     $password = $_POST["password"];
     $password = md5($password);
 

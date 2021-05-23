@@ -15,22 +15,19 @@ define('ROOT_PATH', __DIR__);
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-
-<img src="./images/cartographer.png" alt="bg pattern" class="bg_image">
-
 <?php require_once("navigation.php") ?>
 
 <div class="img__container img__featured">
-    <img width="400" height="400" src="./images/gugnir_1.png" alt="Gugnir image">
+    <img src="./images/gugnir_1.png" alt="Gugnir image">
 </div>
 <div class="img__container img_alternate">
-    <img width="370" height="370" class="hero__alt" src="./images/gugnir_2.png" alt="Gugnir image">
+    <img class="hero__alt" src="./images/gugnir_2.png" alt="Gugnir image">
 </div>
 <div class="img__container img_alternate_2">
-    <img width="400" height="400" class="hero__alt" src="./images/gugnir_2.png" alt="Gugnir image">
+    <img class="hero__alt" src="./images/gugnir_2.png" alt="Gugnir image">
 </div>
 <div class="img__container img_alternate_3">
-    <img width="320" height="320" class="hero__alt" src="./images/gugnir_1.png" alt="Gugnir image">
+    <img class="hero__alt" src="./images/gugnir_1.png" alt="Gugnir image">
 </div>
 <main>
     <section class="hero__message">

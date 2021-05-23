@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="../styles/tabs.css">
 </head>
 <body>
-<img src="../images/cartographer.png" alt="bg pattern" class="bg_image">
-
 <?php require_once("../navigation.php") ?>
 
 <main>

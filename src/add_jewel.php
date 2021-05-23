@@ -1,5 +1,6 @@
 <?php
 require_once('common/connection.php');
+require_once('common/entitizeEmojis.php');
 
 if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image_uri'])) {
     $conn = connect();
@@ -10,7 +11,7 @@ if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image_uri']
     $description = null;
 
     if (isset($_POST['description'])){
-        $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
+        $description = emoji_entitizer(filter_var($_POST['description'], FILTER_SANITIZE_STRING));
     }
 
     $stmt = $conn->prepare("INSERT INTO jewelry (name, price, image_uri, description)

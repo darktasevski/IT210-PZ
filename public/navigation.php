@@ -7,7 +7,6 @@
 
         $mainPagePath = $isExecInPublicRoot ? "index.php" : "../index.php";
         $jewelryPagePath = $isExecInPublicRoot ? "pages/catalog.php" : "catalog.php";
-        $featuredPagePath = $isExecInPublicRoot ? "pages/featured.php" : "featured.php";
         $aboutPagePath = $isExecInPublicRoot ? "pages/about.php" : "about.php";
         $contactPagePath = $isExecInPublicRoot ? "pages/contact.php" : "contact.php";
         $modCatalogPagePath = $isExecInPublicRoot ? "pages/mod_catalog.php" : "mod_catalog.php";
@@ -18,7 +17,6 @@
         echo '<ul class="nav" aria-roledescription="Navigation">';
 
         echo '<li class="link"><a href="'.$jewelryPagePath.'">Jewelry</a> </li>';
-        echo '<li class="link"><a href="'.$featuredPagePath.'">Featured</a> </li>';
         echo '<li class="link"><a href="'.$aboutPagePath.'">About Us</a> </li>';
         echo '<li class="link"><a href="'.$contactPagePath.'">Contact</a> </li>';
 

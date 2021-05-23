@@ -1,7 +1,7 @@
 html, body {
     background: #171717;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 html {
@@ -13,8 +13,16 @@ body {
     position: relative;
     height: 100%;
     display: grid;
-    grid-template-rows: 200px max-content 200px;
+    grid-template-rows: 100px max-content 100px;
+    background-image: url('../images/cartographer.png');
 }
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    body {
+        grid-template-rows: 200px max-content 200px;
+    }
+}
+
 
 main {
     position: relative;
@@ -28,6 +36,14 @@ h1 {
 h3 {
     color: #C9AC9C;
     font-size: 24px;
+    margin: 12px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    h3 {
+        font-size: 28px;
+        margin: 22px;
+    }
 }
 
 p {
@@ -39,10 +55,19 @@ p {
 
 
 header {
-    padding: 25px 60px;
+    padding: 20px 30px;
     display: flex;
     position: relative;
+    height: 90px;
 }
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    header {
+        padding: 25px 60px;
+        height: 160px;
+    }
+}
+
 
 .nav {
     display: flex;
@@ -66,6 +91,56 @@ footer {
     opacity: 0.8;
 }
 
+footer.contact__footer {
+    background: #1B1B1B;
+    width: 100%;
+    height: 70px;
+    opacity: 1;
+    left: 0;
+    bottom: 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact__footer > * {
+    margin-right: 20px;
+}
+
+.contact__footer .contact__info p {
+    font-family: 'Encode Sans Expanded Medium', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.contact__footer .contact__info p:nth-of-type(2){
+    font-family: 'Encode Sans Expanded Medium', sans-serif;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    footer.contact__footer {
+        height: 130px;
+        padding: 20px;
+    }
+
+    .contact__footer > * {
+        margin-right: 40px;
+    }
+
+    .contact__footer .contact__info p {
+        margin: 15px 0;
+        font-size: 20px;
+    }
+
+    .contact__footer .contact__info p:nth-of-type(2){
+        font-size: 16px;
+    }
+}
+
 /* Hero classes */
 
 .img__container.img__featured {
@@ -83,10 +158,26 @@ footer {
 .img__container.img_alternate {
     opacity: 0.7;
     position: absolute;
-    top: 400px;
-    right: 150px;
     z-index: 11;
+    top: 290px;
+    right: 30px;
+}
 
+.img__container.img_alternate img {
+    width: 300px;
+    height: 300px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .img__container.img_alternate {
+        top: 400px;
+        right: 150px;
+    }
+
+    .img__container.img_alternate img {
+        width: 370px;
+        height: 370px;
+    }
 }
 
 .img__container.img_alternate_2 {
@@ -99,14 +190,42 @@ footer {
 
 }
 
+.img__container.img_alternate_2 img {
+    width: 250px;
+    height: 250px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .img__container.img_alternate_2 img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 .img__container.img_alternate_3 {
     opacity: 0.6;
     position: absolute;
-    top: 350px;
-    right: 470px;
+    top: 250px;
+    right: 300px;
     transform: rotate(35deg);
     z-index: 11;
+}
 
+.img__container.img_alternate_3 img {
+    width: 320px;
+    height: 320px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .img__container.img_alternate_3 {
+        top: 350px;
+        right: 470px;
+    }
+
+    .img__container.img_alternate_3 img {
+        width: 420px;
+        height: 420px;
+    }
 }
 
 .bg_image {
@@ -120,18 +239,34 @@ footer {
 .hero__message {
     color: #C9AC9C;
     padding-left: 100px;
-    margin-top: 100px;
+    margin-top: 0;
 }
 
 .hero__message p {
-     width: 500px;
-     font-size: 20px;
+    width: 500px;
+    font-size: 18px;
     line-height: 140%;
- }
+}
 
 .hero__message p:nth-of-type(2) {
     opacity: 0.7;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .hero__message {
+        margin-top: 100px;
+    }
+
+    .hero__message p {
+        width: 700px;
+        font-size: 24px;
+    }
+
+    .hero__message p:nth-of-type(2) {
+        opacity: 0.7;
+        font-size: 22px;
+    }
 }
 
 .link {
