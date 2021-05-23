@@ -10,7 +10,7 @@ Projektni zadatak mora da sadrži sledeće elemente:
 - [x] Treba da postoji rešena navigacija na stranama aplikacije, npr. u obliku menija pri vrhu.
 - [x] Sajt osim glavnog menija treba imati i pomoćni meni (koji se nalazi levo ili desno na sajtu u
 prostoru za banere i reklame) i potrebno je osmisliti funkcionalnost tog menija.
-- [ ] Na početnoj strani sajta potrebno je da postoji neka vrsta animacije koja treba biti kreirana uz pomoć JavaScript-a. Npr. slider (scroller) koji se sastoji iz nekoliko slika koje se smenjuju automatski i/ili ručno.
+- [x] Na početnoj strani sajta potrebno je da postoji neka vrsta animacije koja treba biti kreirana uz pomoć JavaScript-a. Npr. slider (scroller) koji se sastoji iz nekoliko slika koje se smenjuju automatski i/ili ručno.
 - [x] Strana kontakt na kojoj treba da postoji forma za slanje poruka. Pored forme na ovoj strani treba da se nalaze kontakt podaci (email, telefon, adresa, mapa i slično).
 - [x] Implementirati validaciju forme: ime i prezime moraju da budu jedna reč i da ne sadrže brojeve, tekst poruke mora da ima minimalnu i maksimalnu dužinu, u polju za broj telefona mogu se nalaziti samo brojevi i karakter + koji jedino može da bude na početku, pre brojeva.
 - [x] Dodati favicon na sajtu (mala sličica koja se nalazi u tabovima ukoliko se klikne na sajt).
