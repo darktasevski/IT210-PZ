@@ -1,0 +1,44 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_layout {
+    padding: 50px;
+    display: flex;
+}
+
+.product__title {
+    font-size: 36px;
+    color: #C9AC9C;
+}
+
+.product__image {
+    width: 450px;
+    height: 450px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .product__image {
+        width: 650px;
+        height: 650px;
+    }
+}
+
+.product__description {
+    padding: 0 100px;
+    line-height: 130%;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .product__description {
+        font-size: 22px;
+    }
+}
+
+.product__price {
+    font-size: 30px;
+    padding: 0 100px;
+}

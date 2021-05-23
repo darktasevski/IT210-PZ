@@ -150,6 +150,10 @@ footer.contact__footer {
 
 /* Hero classes */
 
+.hero {
+    position: relative;
+}
+
 .img__container.img__featured {
     position: absolute;
     top: -170px;
@@ -326,6 +330,71 @@ a.link {
     font-family: 'Encode Sans Expanded Medium', sans-serif;
     margin: 10px;
     padding: 0;
+}
+
+/*Featured */
+
+.featured {
+    margin-top: 50vh;
+}
+
+.featured__title {
+    font-size: 32px;
+    color: #C9AC9C;
+    text-align: center;
+}
+
+.featured__container {
+    display: flex;
+    flex: 1 1 0px;
+    padding: 20px 20px 40px;
+}
+
+.featured__item {
+    width: 25%;
+    margin-right: 15px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.featured__item:last-of-type {
+    margin-right: 0;
+}
+
+.featured__item__img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.featured__item__title {
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    background: rgba(27, 27, 27, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+.arrow_down {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    bottom: -150px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .arrow_down {
+        font-size: 100px;
+        bottom: -180px;
+    }
 }
 
 /* Helper classes */
