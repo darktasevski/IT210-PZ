@@ -138,18 +138,8 @@ if (!isset($_SESSION["is_employee"]) || $_SESSION["is_employee"] == 0){
     })
 
     deleteBtn.addEventListener('click', e => {
-        console.log("VALUE: ", e)
-
         shouldDelete.checked = true;
         shouldDelete.value = true;
-
-        console.log("VALUE: ", shouldDelete)
-
-
-        if (e.target.value){
-            console.log("VALUE: ", e.target.value)
-            e.preventDefault();
-        }
     })
 
     productsList.addEventListener('click', e => {

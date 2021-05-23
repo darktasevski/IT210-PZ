@@ -17,7 +17,7 @@
 <body>
 <?php require_once("../navigation.php") ?>
 
-<?php require_once("../common/social_bar.php") ?>
+<?php require_once("../common/social_bar.html") ?>
 
 <main>
     <section class="catalog">

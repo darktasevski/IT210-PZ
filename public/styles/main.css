@@ -87,6 +87,10 @@ header {
     margin: 0 10px;
 }
 
+.nav > .link:hover {
+    transform: scale(1.1);
+}
+
 /* Footer */
 
 footer {
@@ -283,12 +287,18 @@ footer.contact__footer {
 .link {
     margin-top: 30px;
     list-style: none;
+    transition: transform ease-in-out .25s;
 }
 
 .link a {
     text-decoration: none;
     color: #C9AC9C;
     border-bottom: 2px solid #C9AC9C;
+    transition: transform ease-in-out .25s;
+}
+
+.link a:hover {
+    transform: scale(1.1);
 }
 
 @media (min-width: 1920px) and (orientation: landscape) {
