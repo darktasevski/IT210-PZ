@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>RuneStone | Admin panel</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/fonts.css">
@@ -15,6 +15,12 @@
 </head>
 <body>
 <?php require_once("../navigation.php") ?>
+
+<?php
+if (!isset($_SESSION["is_employee"]) || $_SESSION["is_employee"] == 0){
+    header("Location: ../index.php");
+}
+?>
 
 <main>
     <section class="container">

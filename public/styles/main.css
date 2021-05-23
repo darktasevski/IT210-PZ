@@ -48,7 +48,14 @@ h3 {
 
 p {
     color: #C9AC9C;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    p {
+        color: #C9AC9C;
+        font-size: 18px;
+    }
 }
 
 /* Nav */
@@ -278,6 +285,12 @@ footer.contact__footer {
     text-decoration: none;
     color: #C9AC9C;
     border-bottom: 2px solid #C9AC9C;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    .link a {
+        font-size: 22px;
+    }
 }
 
 a.link {
