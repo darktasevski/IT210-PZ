@@ -13,6 +13,7 @@ define('ROOT_PATH', __DIR__);
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/slider.css">
 </head>
 <body>
 <?php require_once("navigation.php") ?>
@@ -29,36 +30,44 @@ define('ROOT_PATH', __DIR__);
 <div class="img__container img_alternate_3">
     <img class="hero__alt" src="./images/gugnir_1.png" alt="Gugnir image">
 </div>
-<main>
+<main class="homepage">
     <section class="hero">
         <section class="hero__message">
             <p>Jewelry is something that reflects the essence of a human being during the tens of thousands of years.</p>
             <p><em> Since ancient times, people wear pendants, amulets, bracelets and rings... <span class="h__underline">These pieces show people's individuality,</span>
                     nationality, <span class="h__underline">religious beliefs, and social status.</span>
                     They give protection, inspire confidence and, of course, simply adorn men and women.</em></p>
-            <p class="link"><i>&#5833; </i><a href="pages/about.php">About Us</a></p>
+            <p class="link">&#5833;<a href="pages/about.php">About Us</a></p>
         </section>
-    <p class="arrow_down">&#8964;</p>
+        <a href="#featured">
+            <img class="arrow_down bounce" height="32" width="32" src="images/ChevronDownCircle.svg" alt="Chevron down">
+        </a>
     </section>
 
-
-    <section class="featured">
+    <section id="featured" class="featured">
         <h2 class="featured__title">Featured products</h2>
-        <div class="featured__container">
-            <?php
-                require_once('../src/common/connection.php');
-                $conn = connect();
+        <p class="featured__subtitle"> Current favorites in our collection!</p>
+        <div id="slider" class="slider">
+            <div class="wrapper">
+                <div id="slides" class="slides">
+                    <?php
+                    require_once('../src/common/connection.php');
+                    $conn = connect();
 
-                $sql = "SELECT * FROM jewelry ORDER BY RAND() LIMIT 4";
-                $result = $conn->query($sql);
+                    $sql = "SELECT * FROM jewelry ORDER BY RAND() LIMIT 6";
+                    $result = $conn->query($sql);
 
-                while ($row = $result->fetch()) {
-                    echo '<div class="featured__item">
-                        <img class="featured__item__img" id="'.$row["id"].'" src="'.$row["image_uri"].'" alt="image" />
-                        <p class="featured__item__title">'. $row["name"] .'</p>
+                    while ($row = $result->fetch()) {
+                        echo '<div class="slide">
+                            <img class="featured__item__img" id="'.$row["id"].'" src="'.$row["image_uri"].'" alt="image" />
+                            <p class="featured__item__title">'. $row["name"] .'</p>
                         </div>';
-                }
-            ?>
+                    }
+                    ?>
+                </div>
+            </div>
+            <a id="prev" class="control prev"></a>
+            <a id="next" class="control next"></a>
         </div>
     </section>
 </main>
@@ -74,10 +83,12 @@ define('ROOT_PATH', __DIR__);
     }
 ?>
 
-<script>
-    const featured = document.getElementsByClassName("featured__container")[0];
+<script src="scripts/slider.js"></script>
 
-    featured.addEventListener('click', function (e) {
+<script>
+    const featuredSlides = document.getElementById("slides");
+
+    featuredSlides.addEventListener('click', function (e) {
         if (e.target.id) {
             window.location.href = `pages/product.php?id=${e.target.id}`;
         }

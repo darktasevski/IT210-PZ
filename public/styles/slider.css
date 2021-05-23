@@ -1,0 +1,99 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version
+*/
+
+.slider {
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 500px;
+    height: 500px;
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+}
+
+.slides {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: -500px;
+    width: 10000px;
+}
+
+.slides.shifting {
+    -webkit-transition: left 0.2s ease-out;
+    transition: left 0.2s ease-out;
+}
+
+.slide {
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    position: relative;
+    background: #171717;
+    border-radius: 2px;
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    margin-top: -20px;
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.prev,
+.next {
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.prev {
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+    left: -20px;
+}
+
+.next {
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+    right: -20px;
+}
+
+.prev:active,
+.next:active {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}

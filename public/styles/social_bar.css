@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version
+*/
+
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
     position: fixed;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -10,6 +18,7 @@
     display: block;
     text-align: center;
     padding: 16px;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     color: white;
     font-size: 20px;
