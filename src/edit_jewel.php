@@ -15,20 +15,27 @@ if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image_uri']
         $description = emoji_entitizer(filter_var($_POST['description'], FILTER_SANITIZE_STRING));
     }
 
-    $stmt = $conn->prepare("UPDATE jewelry j 
-                            SET j.name=:name, j.price=:price, j.image_uri=:image_uri, j.description=:description 
-                            WHERE j.id =:id");
-    $stmt->bindParam(":name", $name);
-    $stmt->bindParam(":price", $price);
-    $stmt->bindParam(":image_uri", $image_uri);
-    $stmt->bindParam(":description", $description);
-    $stmt->bindParam(":id", $id);
+    $stmt = null;
+
+    if (isset($_POST["should_delete"])){
+        $stmt = $conn->prepare("DELETE FROM jewelry WHERE id=:id");
+        $stmt->bindParam(":id", $id);
+    } else {
+        $stmt = $conn->prepare("UPDATE jewelry j 
+                                SET j.name=:name, j.price=:price, j.image_uri=:image_uri, j.description=:description 
+                                WHERE j.id =:id");
+        $stmt->bindParam(":name", $name);
+        $stmt->bindParam(":price", $price);
+        $stmt->bindParam(":image_uri", $image_uri);
+        $stmt->bindParam(":description", $description);
+        $stmt->bindParam(":id", $id);
+    }
 
     if($stmt->execute()) {
-        header('Location: ../public/pages/mod_catalog.php?success=1');
+        header('Location: ../public/pages/mod_catalog.php?success=1&edit=true');
     } else {
-        header('Location: ../public/pages/mod_catalog.php?fail=1');
+        header('Location: ../public/pages/mod_catalog.php?fail=1&edit=true');
     }
 } else {
-    header('Location: ../public/pages/mod_catalog.php?fail=1');
+    header('Location: ../public/pages/mod_catalog.php?fail=1&edit=true');
 }

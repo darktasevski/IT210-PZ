@@ -16,13 +16,13 @@ prostoru za banere i reklame) i potrebno je osmisliti funkcionalnost tog menija.
 - [x] Dodati favicon na sajtu (mala sličica koja se nalazi u tabovima ukoliko se klikne na sajt).
 - [ ] Baza podataka sa najmanje pet tabela koju sami dizajnirate, a koja odgovara zadatoj temi.
 - [x] HTML forme za unos podataka u bazu.
-- [ ] Dodati mogućnost izmene podataka.
+- [x] Dodati mogućnost izmene podataka.
 - [x] Bar jedna strana na kojoj se prikazuju uneti podaci iz baze.
 - [x] HTML forma za pretragu podataka iz baze ili master/detail strane.
 - [x] Mehanizam za login/logout i praćenje trenutnog korisnika. Potrebno je kreirati odgovarajuću tabelu u bazi i HTML formu za login sa korisničkim imenom i lozinkom. Korisnici mogu biti „obični“ korisnici ili administratori.
 - [x] Za korisnike administratore omogućiti dodatne funkcije koje nisu dostupne ostalim korisnicima.
-- [ ] Omogućiti svakom korisniku da briše samo one stavke koje je on upisao u bazu, dok administratori mogu da brišu sve.
-- [ ] Sve forme moraju imati proveru unetih podataka (polja koja moraju biti određenenog formata, ne smeju ostati prazna i slično).
+- [x] Omogućiti svakom korisniku da briše samo one stavke koje je on upisao u bazu, dok administratori mogu da brišu sve.
+- [x] Sve forme moraju imati proveru unetih podataka (polja koja moraju biti određenenog formata, ne smeju ostati prazna i slično).
 - [x] Pravilno konstruisani upiti koji nisu ranjivi na SQL injection napade.
 - [x] Projekat treba da ima mehanizam za praćenje sesija, odnosno korisničkih podataka kao što su ime korisnika i da li ima administratorske privilegije ili ne.
 - [x] U zaglavlju strane pored opcije logout, u slučaju da je neki korisnik ulogovan, treba da stoji ime/username tog korisnika koje se čuva preko sesije.

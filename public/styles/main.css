@@ -399,6 +399,49 @@ a.link {
     }
 }
 
+/*Edit page */
+
+#productsList {
+    height: 400px;
+    width: 250px;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    overflow:hidden;
+    overflow-y:auto;
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    #productsList {
+        width: 450px;
+        left: 100px;
+    }
+}
+
+#productsList li {
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Encode Sans Expanded Medium', sans-serif;
+    color: #C9AC9C;
+}
+
+.btnsContainer {
+    display: flex;
+}
+
+.btnsContainer > fieldset > button[type="submit"] {
+    width: 99%;
+}
+
+.btnsContainer > fieldset > button[type="submit"]:first-of-type {
+    margin-left: 1%;
+}
+
+#deleteBtn {
+    background: #7C0A02;
+}
+
 /* Helper classes */
 
 .h__underline {

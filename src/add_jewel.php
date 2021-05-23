@@ -22,10 +22,10 @@ if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image_uri']
     $stmt->bindParam(":description", $description);
 
     if($stmt->execute()) {
-        header('Location: ../public/pages/mod_catalog.php?success=1');
+        header('Location: ../public/pages/mod_catalog.php?success=1&add=true');
     } else {
-        header('Location: ../public/pages/mod_catalog.php?fail=1');
+        header('Location: ../public/pages/mod_catalog.php?fail=1&add=true');
     }
 } else {
-    header('Location: ../public/pages/mod_catalog.php?fail=1');
+    header('Location: ../public/pages/mod_catalog.php?fail=1&add=true');
 }

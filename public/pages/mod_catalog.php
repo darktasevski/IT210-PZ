@@ -21,15 +21,35 @@ if (!isset($_SESSION["is_employee"]) || $_SESSION["is_employee"] == 0){
     header("Location: ../index.php");
 }
 ?>
+    <ul id="productsList" style="visibility: hidden; pointer-events: none">
+        <?php
+            require_once('../../src/common/connection.php');
+            $conn = connect();
+
+            $sql = "SELECT * FROM jewelry";
+            $result = $conn->query($sql);
+
+            while ($row = $result->fetch()) {
+                echo '<li class="productsList__item" id="'.$row["id"].'"
+                        data-name="'.$row["name"].'"
+                        data-price="'.$row["price"].'"
+                        data-description="'.$row["description"].'"
+                        data-image-uri="'.$row["image_uri"].'"
+                        >
+                        '.$row["name"].'
+                      </li>';
+            }
+        ?>
+    </ul>
 
 <main>
     <section class="container">
         <div class="tabs">
-            <input type="radio" name="tab" id="tab1" aria-controls="add_new" checked>
-            <label for="tab1">Add new</label>
+            <input type="radio" name="tab" id="addTab" aria-controls="add_new" checked>
+            <label for="addTab">Add new</label>
 
-            <input type="radio" name="tab" id="tab2" aria-controls="edit">
-            <label for="tab2">Edit</label>
+            <input type="radio" name="tab" id="editTab" aria-controls="edit">
+            <label for="editTab">Edit</label>
 
             <div class="tab-panels">
                 <section id="add_new" class="tab-panel">
@@ -57,21 +77,27 @@ if (!isset($_SESSION["is_employee"]) || $_SESSION["is_employee"] == 0){
                     <h3 class="h__center_text">Edit existing jewelry piece</h3>
                     <form id="contact" class="form" action="../../src/edit_jewel.php" method="POST">
                         <fieldset>
-                            <input placeholder="Piece name" type="text" tabindex="1" name="name" required autofocus>
+                            <input placeholder="Piece name" type="text" tabindex="1" name="name" id="nameInput" required autofocus>
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Piece price" min="1" type="number" tabindex="2" name="price" required>
+                            <input placeholder="Piece price" min="1" type="number" tabindex="2" name="price" id="priceInput" required>
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Piece image" type="text" tabindex="3" name="image_uri" required>
+                            <input placeholder="Piece image URL" type="text" tabindex="3" name="image_uri" id="uriInput" required>
                         </fieldset>
                         <fieldset>
-                            <textarea placeholder="Piece Description..." tabindex="4"></textarea>
+                            <textarea placeholder="Piece Description..." id="descInput" tabindex="4" name="description"></textarea>
                         </fieldset>
                         <input type="hidden" id="idInput" name="id" hidden />
-                        <fieldset>
-                            <button name="submit" type="submit">Submit</button>
-                        </fieldset>
+                        <input type="checkbox" id="shouldDelete" value="false" name="should_delete" hidden />
+                        <div class="btnsContainer">
+                            <fieldset>
+                                <button type="submit">Submit</button>
+                            </fieldset>
+                            <fieldset>
+                                <button id="deleteBtn" type="submit">Delete product</button>
+                            </fieldset>
+                        </div>
                     </form>
                 </section>
             </div>
@@ -87,5 +113,68 @@ if (!isset($_SESSION["is_employee"]) || $_SESSION["is_employee"] == 0){
 </main>
 
 <?php require_once("../common/footer.php") ?>
+
+<script>
+    const addNewTab = document.getElementById("addTab");
+    const editTab = document.getElementById("editTab");
+    const deleteBtn = document.getElementById("deleteBtn");
+    const shouldDelete = document.getElementById("shouldDelete");
+    const productsList = document.getElementById("productsList");
+
+    const nameInput = document.getElementById("nameInput");
+    const priceInput = document.getElementById("priceInput");
+    const uriInput = document.getElementById("uriInput");
+    const descInput = document.getElementById("descInput");
+    const idInput = document.getElementById("idInput");
+
+    addNewTab.addEventListener('click', e => {
+        productsList.style.visibility = 'hidden';
+        productsList.style.pointerEvents = 'none';
+    })
+
+    editTab.addEventListener('click', e => {
+        productsList.style.visibility = 'visible';
+        productsList.style.pointerEvents = 'all';
+    })
+
+    deleteBtn.addEventListener('click', e => {
+        console.log("VALUE: ", e)
+
+        shouldDelete.checked = true;
+        shouldDelete.value = true;
+
+        console.log("VALUE: ", shouldDelete)
+
+
+        if (e.target.value){
+            console.log("VALUE: ", e.target.value)
+            e.preventDefault();
+        }
+    })
+
+    productsList.addEventListener('click', e => {
+        if (e.target.id){
+            idInput.value = e.target.id;
+            nameInput.value = e.target.dataset.name;
+            priceInput.value = e.target.dataset.price;
+            uriInput.value = e.target.dataset.imageUri;
+            descInput.value = e.target.dataset.description;
+        }
+    })
+
+
+    const qp = new URLSearchParams(window.location.search);
+    const isEdit = qp.get("edit");
+    const isAdd = qp.get("add");
+    if (isEdit){
+        console.log(isEdit);
+        editTab.checked = true;
+        productsList.style.visibility = 'visible';
+        productsList.style.pointerEvents = 'all';
+    } else if(isAdd){
+        console.log(isAdd);
+        addNewTab.checked = true;
+    }
+</script>
 </body>
 </html>
