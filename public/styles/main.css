@@ -563,3 +563,14 @@ a.link {
 .h__center_text {
     text-align: center;
 }
+
+.text__container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.text__container > p {
+    font-size: 20px;
+    line-height: 130%;
+
+}
