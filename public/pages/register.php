@@ -15,6 +15,12 @@
 <body>
 <?php require_once("../navigation.php") ?>
 
+<?php
+    if (isset($_SESSION["email"])){
+        header("Location: ../index.php");
+    }
+?>
+
 <main>
     <section class="container">
         <h1>Signup</h1>

@@ -357,7 +357,7 @@ footer.contact__footer {
 .arrow_down {
     position: relative;
     left: calc(50% - 32px);
-    bottom: -270px;
+    bottom: -200px;
     cursor: pointer;
 
     -webkit-animation-duration: 1s;
@@ -370,9 +370,10 @@ footer.contact__footer {
     -webkit-animation-iteration-count: infinite;
 }
 
-@media (min-width: 1920px) and (orientation: landscape) {
-    /*.arrow_down {*/
-    /*}*/
+@media (min-width: 1600px) and (orientation: landscape) {
+    .arrow_down {
+        bottom: -270px;
+    }
 }
 
 .link {
